@@ -1,6 +1,13 @@
+"""
+tool for calculate the area and perimeter for different shapes
+string checker component
+v1 component string checker - check to make sure the function is called
+"""
+
+
 # string checking functions, takes in
 # question and list of valid responses
-def string_checker (question, to_check):
+def string_checker(question, to_check):
 
     valid = False
     while not valid:
@@ -23,7 +30,7 @@ def string_checker (question, to_check):
 
 
 # Main routine starts here
-for item in range(0,5):
+for item in range(0, 5):
     shapes = string_checker("What shape you want to enter ",
                             ["triangle", "rectangle",
                              "circle", "parallelogram",
