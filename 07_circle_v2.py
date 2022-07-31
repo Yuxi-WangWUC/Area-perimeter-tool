@@ -33,8 +33,8 @@ def int_check(questions):
 
 # main routine
 for i in range(0, 4):
-    radius_c = int_check("Radius, π = 3.14: ")
-    ans_c_cir = int_check("Answer for circumference in 2 decimal places: ")
+    radius_c = round(int_check("Radius (π = 3.14): "), 2)
+    ans_c_cir = round(int_check("Answer for circumference: "), 2)
     pi = 3.14
 
     total_c_cir = round(radius_c * 2 * pi, 2)
@@ -43,7 +43,7 @@ for i in range(0, 4):
     else:
         print("This is the correct answer. Well done")
 
-    ans_c_area = int_check("Answer for area in 2 decimal places: ")
+    ans_c_area = round(int_check("Answer for area: "), 2)
     total_c_area = round(radius_c * radius_c * pi, 2)
     if total_c_area != ans_c_area:
         print("Sorry, this is incorrect. The real answer is {:.2f}.".format(total_c_area))

@@ -1,8 +1,8 @@
 """
 tool for calculate the area and perimeter for different shapes
-parallelogram component
-v1 first version of the parallelogram function
-get dimensions of parallelogram, loop for several times
+rectangle component
+v1 first version of the rectangle function
+get dimensions of rectangle, loop for three times
 calculate the perimeter and area, check against user's answer
 if correct, then well down
 if not, then print the correct answer
@@ -31,21 +31,20 @@ def int_check(questions):
 
 # main routine
 for i in range(0, 4):
-    hypotenuse_p = int_check("Hypotenuse: ")
-    height_p = int_check("Height: ")
-    base_p = int_check("Base: ")
+    height_r = round(int_check("Height: "), 2)
+    base_r = round(int_check("Base: "), 2)
+    ans_r_peri = round(int_check("Answer for perimeter in 2 decimal places: "), 2)
 
-    ans_p_peri = int_check("Answer for perimeter in 2 decimal places: ")
-    total_p_peri = round((base_p + hypotenuse_p)*2, 2)
-    if ans_p_peri != total_p_peri:
-        print("Sorry, this is incorrect. The real answer is {:.2f}.".format(total_p_peri))
+    total_r_peri = round((height_r + base_r) * 2, 2)
+    if ans_r_peri != total_r_peri:
+        print("Sorry, this is incorrect. The real answer is {:.2f}.".format(total_r_peri))
     else:
         print("This is the correct answer. Well done")
 
-    ans_p_area = int_check("Answer for area in 2 decimal places: ")
-    total_p_area = round(base_p * height_p, 2)
-    if total_p_area != ans_p_area:
-        print("Sorry, this is incorrect. The real answer is {:.2f}.".format(total_p_area))
+    ans_r_area = round(int_check("Answer for area in 2 decimal places: "), 2)
+    total_r_area = round(base_r * height_r, 2)
+    if total_r_area != ans_r_area:
+        print("Sorry, this is incorrect. The real answer is {:.2f}.".format(total_r_area))
     else:
         print("This is the correct answer. Well done")
     print()
